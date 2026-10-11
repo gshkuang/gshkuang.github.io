@@ -29,3 +29,4 @@ title: 文档
 - [铜与贵金属](/posts/econ-metals) — 供给瓶颈与货币属性
 - [固态电池与储能](/posts/econ-battery) — 验证年：节奏路线结构证伪
 - [AI债务周期](/posts/econ-aidebt) — 当算力变成融资标的
+- [思维工具](/posts/econ-tools) — 传导链条加十工具加研究工作流

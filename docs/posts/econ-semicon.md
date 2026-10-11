@@ -43,6 +43,8 @@ flowchart LR
 - **国产链证伪：** 海外巨头集中扩产打价格战、先进制程良率/客户导入不及预期、设备招标转订单不及预期。
 - **跟踪项：** 存储合约价环比、原厂长协覆盖率、台积电/中芯利用率与capex执行率、HBM4量产节奏。
 
+**传导链：** AI capex → HBM/先进制程需求 → 涨价 → 原厂加capex与国产扩产 → 供给释放 → 价格回落。断点：capex不及预期、释放超预期、成熟制程拖累。方法见[《思维工具》](/posts/econ-tools)§1。
+
 ## 参考
 
 - 德勤《2026全球半导体行业趋势报告》：https://www.deloitte.com/cn/zh/Industries/telecom-media-entertainment/perspectives/deloitte-2026-global-semiconductor-industry-outlook.html
