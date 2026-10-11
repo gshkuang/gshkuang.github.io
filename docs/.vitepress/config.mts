@@ -15,8 +15,7 @@ export default withMermaid(
             { text: '智能体笔记', link: '/posts/agent-harness' },
             { text: 'RSI 笔记', link: '/posts/rsi' },
             { text: 'Agent手册', link: '/posts/agent-manual' },
-            { text: 'Agent模式笔记', link: '/posts/agent-patterns' },
-            { text: 'Agent对标GoF', link: '/posts/agent-gof' },
+            { text: '从GoF到Agent模式', link: '/posts/gof-agent' },
           ],
         },
         {
@@ -39,8 +38,7 @@ export default withMermaid(
             { text: '智能体笔记', link: '/posts/agent-harness' },
             { text: 'RSI 笔记', link: '/posts/rsi' },
             { text: 'Agent手册', link: '/posts/agent-manual' },
-            { text: 'Agent模式笔记', link: '/posts/agent-patterns' },
-            { text: 'Agent对标GoF', link: '/posts/agent-gof' },
+            { text: '从GoF到Agent模式', link: '/posts/gof-agent' },
           ],
         },
         {
