@@ -32,10 +32,8 @@ export default withMermaid(
         {
           text: '经济',
           items: [
-            { text: '经济股市原理', link: '/posts/econ-principles' },
-            { text: '市场的多种逻辑', link: '/posts/econ-logics' },
-            { text: '中国市场案例包', link: '/posts/econ-cn' },
-            { text: '当前问题习题集', link: '/posts/econ-exercises' },
+            { text: '股市笔记', link: '/posts/econ-principles' },
+            { text: '交易流派', link: '/posts/econ-logics' },
           ],
         },
       ],
@@ -66,10 +64,8 @@ export default withMermaid(
           text: '经济',
           collapsed: true,
           items: [
-            { text: '经济股市原理', link: '/posts/econ-principles' },
-            { text: '市场的多种逻辑', link: '/posts/econ-logics' },
-            { text: '中国市场案例包', link: '/posts/econ-cn' },
-            { text: '当前问题习题集', link: '/posts/econ-exercises' },
+            { text: '股市笔记', link: '/posts/econ-principles' },
+            { text: '交易流派', link: '/posts/econ-logics' },
           ],
         },
       ],

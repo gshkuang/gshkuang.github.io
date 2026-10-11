@@ -22,7 +22,5 @@ title: 文档
 
 ## 经济
 
-- [经济股市原理](/posts/econ-principles) — 理解股市的学习框架：运行 / 定价 / 结构 / 证伪
-- [市场的多种逻辑](/posts/econ-logics) — 八种市场逻辑的历史案例讲解
-- [中国市场案例包](/posts/econ-cn) — A股八例：运行 / 定价 / 结构 / 证伪四栏
-- [当前问题习题集](/posts/econ-exercises) — 十五道时事题：观察加证伪，风险预算框架
+- [股市笔记](/posts/econ-principles) — 理解股市的学习框架：运行 / 定价 / 结构 / 证伪
+- [交易流派](/posts/econ-logics) — 八种驱动逻辑的历史案例讲解
