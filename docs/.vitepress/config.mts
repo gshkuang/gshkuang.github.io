@@ -16,6 +16,7 @@ export default withMermaid(
             { text: 'RSI 笔记', link: '/posts/rsi' },
             { text: 'Agent手册', link: '/posts/agent-manual' },
             { text: '从GoF到Agent模式', link: '/posts/gof-agent' },
+            { text: 'Agent评估笔记', link: '/posts/agent-eval' },
           ],
         },
         {
@@ -34,6 +35,10 @@ export default withMermaid(
           items: [
             { text: '股市笔记', link: '/posts/econ-principles' },
             { text: '交易流派', link: '/posts/econ-logics' },
+            { text: '半导体', link: '/posts/econ-semicon' },
+            { text: '铜与贵金属', link: '/posts/econ-metals' },
+            { text: '固态电池与储能', link: '/posts/econ-battery' },
+            { text: 'AI债务周期', link: '/posts/econ-aidebt' },
           ],
         },
       ],
@@ -46,6 +51,7 @@ export default withMermaid(
             { text: 'RSI 笔记', link: '/posts/rsi' },
             { text: 'Agent手册', link: '/posts/agent-manual' },
             { text: '从GoF到Agent模式', link: '/posts/gof-agent' },
+            { text: 'Agent评估笔记', link: '/posts/agent-eval' },
           ],
         },
         {
@@ -66,6 +72,10 @@ export default withMermaid(
           items: [
             { text: '股市笔记', link: '/posts/econ-principles' },
             { text: '交易流派', link: '/posts/econ-logics' },
+            { text: '半导体', link: '/posts/econ-semicon' },
+            { text: '铜与贵金属', link: '/posts/econ-metals' },
+            { text: '固态电池与储能', link: '/posts/econ-battery' },
+            { text: 'AI债务周期', link: '/posts/econ-aidebt' },
           ],
         },
       ],

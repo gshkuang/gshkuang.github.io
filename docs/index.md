@@ -10,6 +10,7 @@ title: 文档
 - [RSI 笔记](/posts/rsi) — 同一骨架如何自我改进：改哪里 / 能不能迁移 / 会不会越改越快
 - [Agent手册](/posts/agent-manual) — AI Agent 系统化知识手册：基础 / 推理 / 记忆 / 工具 / RAG / 多 Agent / 治理 / 工程
 - [从GoF到Agent模式](/posts/gof-agent) — GoF 管确定性协作，Agent 模式管运行时决策：分层与选型
+- [Agent评估笔记](/posts/agent-eval) — 评估闭环六环：环境 / 数据集 / 指标 / 方法 / 归因 / 回流，附美团智能客服报告解读
 
 ## 后端
 
@@ -24,3 +25,7 @@ title: 文档
 
 - [股市笔记](/posts/econ-principles) — 理解股市的学习框架：运行 / 定价 / 结构 / 证伪
 - [交易流派](/posts/econ-logics) — 八种驱动逻辑的历史案例讲解
+- [半导体](/posts/econ-semicon) — AI 单极拉动与国产化
+- [铜与贵金属](/posts/econ-metals) — 供给瓶颈与货币属性
+- [固态电池与储能](/posts/econ-battery) — 验证年：节奏路线结构证伪
+- [AI债务周期](/posts/econ-aidebt) — 当算力变成融资标的
