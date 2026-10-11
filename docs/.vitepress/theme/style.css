@@ -1,0 +1,94 @@
+/*
+ * 说明：默认主题的样式带了 scoped 的 data-v-xxx 属性选择器，特异性高于普通类名选择器，
+ * 因此下面覆盖宽度的地方用 !important 提权，不要再删掉。
+ * 可读性取舍：正文宽度随屏幕放宽，但不对高层标题、图片做强制拉伸。
+ */
+
+:root {
+  /* 默认 1440px，大屏两侧会空出一大块 */
+  --vp-layout-max-width: 1760px;
+}
+
+/* ---------- 1. 正文宽度随屏幕自适应 ---------- */
+/* 默认主题 .VPDoc.has-aside .content-container 固定 688px，大屏会显得中间一条、两边全空 */
+@media (min-width: 1280px) {
+  .VPDoc.has-aside .content-container { max-width: 840px !important; }
+}
+@media (min-width: 1440px) {
+  .VPDoc.has-aside .content-container { max-width: 980px !important; }
+}
+@media (min-width: 1700px) {
+  .VPDoc.has-aside .content-container { max-width: 1160px !important; }
+}
+@media (min-width: 2000px) {
+  .VPDoc.has-aside .content-container { max-width: 1280px !important; }
+}
+/* 没有大纲（aside）的页面把上限放宽即可，不用层层覆盖 */
+.VPDoc:not(.has-sidebar) .content { max-width: 1000px !important; }
+
+/* 表格在大屏下不必截断成滚动块（窄屏仍保持原生横向滚动） */
+@media (min-width: 1280px) {
+  .vp-doc table { display: table; width: 100%; }
+}
+
+/* ---------- 2. 侧边导航的隐藏开关 ---------- */
+/* 桌面端默认主题侧边栏常驻，且没有折叠整块的入口；这里通过 html.hide-sidebar 切换 */
+.VPSidebar {
+  transition: opacity .25s, transform .25s ease;
+}
+
+@media (min-width: 960px) {
+  html.hide-sidebar .VPSidebar {
+    opacity: 0;
+    transform: translate(-100%);
+    pointer-events: none;
+  }
+
+  /* 标准做法是把正文左侧留给侧边栏的 padding 收回 */
+  html.hide-sidebar .VPContent.has-sidebar {
+    padding-left: 0 !important;
+  }
+  html.hide-sidebar .VPNavBar.has-sidebar .content {
+    padding-left: 0 !important;
+  }
+  html.hide-sidebar .VPNavBar.has-sidebar .divider {
+    padding-left: 0 !important;
+  }
+  /* 站点标题在桌面端被绝对定位到侧边栏那一列，隐藏后要让它回到正常流 */
+  html.hide-sidebar .VPNavBar.has-sidebar .title {
+    position: static;
+    width: auto;
+    padding: 0 8px 0 32px;
+  }
+
+  /* 腾出来的空间给正文 */
+  html.hide-sidebar .VPDoc.has-aside .content-container {
+    max-width: 1100px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  html.hide-sidebar .VPContent.has-sidebar {
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2) !important;
+    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2) !important;
+  }
+  html.hide-sidebar .VPNavBar.has-sidebar .content {
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2) !important;
+    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px) !important;
+  }
+  html.hide-sidebar .VPNavBar.has-sidebar .divider {
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2) !important;
+  }
+  html.hide-sidebar .VPNavBar.has-sidebar .title {
+    padding-left: max(32px, calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)) !important;
+  }
+  html.hide-sidebar .VPDoc.has-aside .content-container {
+    max-width: 1240px !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  html.hide-sidebar .VPDoc.has-aside .content-container {
+    max-width: 1440px !important;
+  }
+}
