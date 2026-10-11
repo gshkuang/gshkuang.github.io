@@ -33,7 +33,7 @@ description: GoF管确定性协作，Agent模式管运行时决策 — 分层与
 | L3 思考认知层 | Agent 怎么想 | 推理（ReAct/CoT/ToT）、规划、反思/Evaluator、学习适应、探索发现、优先级排序 | **无传统等价物**，这是 Agent 增量 |
 | L4-L5 协作治理层 | 多智能体 + 人 + 运维怎么管 | 多智能体协作、HITL、Guardrails、评估监控、资源优化 | 逻辑相通：Actor、Proxy、Observer、SRE，载荷换成自然语言 |
 
-- 结论先行：约 1/3 直接复用，1/3 要改造，1/3 全新。全新的三块就是本文增量：ReAct、规划、多智能体通信。
+- 结论先行：约 1/3 直接复用，1/3 要改造；真正的增量是 L3 思考层（ReAct、规划、反思——机器自己想）。多智能体归协作层，逻辑沿用微服务，新的是自然语言载荷。
 - 多智能体放协作层不放 L3：单个 Agent 的想是 L3，多个 Agent 怎么商量（debate/vote/handoff）是协作问题；反思是单体自省，多智能体是群体商量，分开读者更清楚。
 
 ## 3. 能直接抄的三组
@@ -64,9 +64,9 @@ description: GoF管确定性协作，Agent模式管运行时决策 — 分层与
 
 分治、投票聚合就是 Fork-Join 和 N-Version，差异最小。Orchestrator 是动态版：中央 LLM 看输入现拆活、分给 worker、再聚合，像 Mediator + Supervisor。写好：worker 输入输出定 schema，Supervisor 只分发不干活，并发加聚合超时，全轨迹 logging 否则挂了查不清。
 
-## 5. 无对标三者：Agent 真正的增量
+## 5. L3 增量与多智能体
 
-**一句话：ReAct 是运行时解释执行，规划是粗版 ReAct，多智能体是自然语言版微服务——三者都没有传统祖先。**
+**一句话：ReAct 是运行时解释执行，规划是粗版 ReAct——L3 两式没有传统祖先；多智能体有逻辑祖先（微服务），新的是自然语言载荷。**
 
 ### ReAct + 规划
 
@@ -75,7 +75,6 @@ description: GoF管确定性协作，Agent模式管运行时决策 — 分层与
 | ReAct | 思考→行动→观察交错（Yao 2022） | 开放任务、工具多 | 步数多、易漂移 |
 | Reflexion | 失败后自然语言复盘入记忆 | 可试错、有明确判分 | 需好评估器 |
 | Plan-and-Execute | 先出计划再逐步执行、偏差重规划 | 长任务、步骤可列 | 规划错全错 |
-| ReWOO | 一次性全规划 + 工具变量替换 | 工具调用可预见 | 灵活性低 |
 
 - 生产配方：大计划粗分 + 每步内小 ReAct + 步步 grounding；流程固定的老实用提示链，别为智能而规划。
 - 必须 Bounded：最大步/次/时三限，计划先打印给人看，失败回退上一步。状态机转移是写死的，ReAct 下一步是模型定的——这就是无祖先的原因。
@@ -116,7 +115,7 @@ flowchart LR
 ## 参考资料
 
 - Anthropic《Building Effective Agents》（工作流五式与"简单优先"）：https://www.anthropic.com/engineering/building-effective-agents
-- ReAct（`arXiv:2210.03629`）、Reflexion（`arXiv:2303.11366`）；四模式对照：https://theaiengineer.substack.com/p/the-4-single-agent-patterns
+- ReAct（`arXiv:2210.03629`）、Reflexion（`arXiv:2303.11366`）；ReAct/规划/反思对照：https://theaiengineer.substack.com/p/the-4-single-agent-patterns
 - HuggingFace《Design Patterns for Building Agentic Workflows》：https://huggingface.co/blog/dcarpintero/design-patterns-for-building-agentic-workflows
 - Agentic Design Patterns 入门：https://aman.ai/primers/ai/agentic-design-patterns/
 - Microsoft AI Agent Orchestration Patterns；谷歌《Agentic Design Patterns》（xindoo 中文版 21 章）；Augment 2026 Catalog。
