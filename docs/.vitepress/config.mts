@@ -16,6 +16,7 @@ export default withMermaid(
             { text: 'RSI 笔记', link: '/posts/rsi' },
             { text: 'Agent手册', link: '/posts/agent-manual' },
             { text: 'Agent模式笔记', link: '/posts/agent-patterns' },
+            { text: 'Agent对标GoF', link: '/posts/agent-gof' },
           ],
         },
         {
@@ -39,6 +40,7 @@ export default withMermaid(
             { text: 'RSI 笔记', link: '/posts/rsi' },
             { text: 'Agent手册', link: '/posts/agent-manual' },
             { text: 'Agent模式笔记', link: '/posts/agent-patterns' },
+            { text: 'Agent对标GoF', link: '/posts/agent-gof' },
           ],
         },
         {
