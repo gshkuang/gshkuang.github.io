@@ -9,7 +9,7 @@ title: 文档
 - [智能体笔记](/posts/agent-harness) — 推理 / 上下文 / 工具与约束各是什么，怎么工作
 - [RSI 笔记](/posts/rsi) — 同一骨架如何自我改进：改哪里 / 能不能迁移 / 会不会越改越快
 - [Agent手册](/posts/agent-manual) — AI Agent 系统化知识手册：基础 / 推理 / 记忆 / 工具 / RAG / 多 Agent / 治理 / 工程
-- [从GoF到Agent模式](/posts/gof-agent) — GoF 管确定性协作，Agent 模式管运行时决策：对标与选型
+- [从GoF到Agent模式](/posts/gof-agent) — GoF 管确定性协作，Agent 模式管运行时决策：分层与选型
 
 ## 后端
 
